@@ -11,7 +11,9 @@ Vagrant::Config.run do |config|
 	config.vm.define :mongodb do |mongodb|
 		mongodb.vm.box = "ubuntu_precise64"
 		mongodb.vm.box_url = "http://files.vagrantup.com/precise64.box"
-		mongodb.vm.network :hostonly, "192.168.1.11"
+		# mongodb.vm.network :hostonly, "192.168.1.11"
+		mongodb.vm.network :private_network, ip: "10.0.0.101"
+		mongodb.vm.hostname = "db.mongodb.server"
 
 		# This shell provisioner installs librarian-puppet and runs it to install
 		# puppet modules. This has to be done before the puppet provisioning so that
@@ -30,7 +32,9 @@ Vagrant::Config.run do |config|
 	config.vm.define :appserver do |appserver|
 		appserver.vm.box = "ubuntu_precise64"
 		appserver.vm.box_url = "http://files.vagrantup.com/precise64.box"
-		appserver.vm.network :hostonly, "192.168.1.12"
+		# appserver.vm.network :hostonly, "192.168.1.12"
+		appserver.vm.network :private_network, ip: "10.0.0.102"
+        appserver.vm.hostname = "mean.development.com"
 
 		# This shell provisioner installs librarian-puppet and runs it to install
 		# puppet modules. This has to be done before the puppet provisioning so that

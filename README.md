@@ -1,5 +1,5 @@
-mean-vagrant
-============
+Vagrant for MEAN Stack
+======================
 
 Vagrant Development Environment for Kick-Starting Developing an application in the MEAN Stack.
 
@@ -14,7 +14,12 @@ Vagrant Development Environment for Kick-Starting Developing an application in t
 * Navigate in browser to [Express Server](http://192.168.1.12:3000/) and you should see "Welcome to Express"
 * That's it you have a base application using the MEAN Stack as coined by [Valeri Karpov](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and)
 
-#### Environment Details
-    * Application Server IP = 192.168.1.12
-    * MongoDb Server IP = 192.168.1.11
+#### Add the following lines to your machine's host file
+
+10.0.0.101 db.mongodb.server
+10.0.0.102 mean.development.com
+
+#### Use the following hostname for your app
+    * Application Server = mean.development.com
+    * MongoDb Server = db.mongodb.server
 
