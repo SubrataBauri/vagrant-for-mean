@@ -11,7 +11,6 @@ Vagrant::Config.run do |config|
 	config.vm.define :mongodb do |mongodb|
 		mongodb.vm.box = "ubuntu_precise64"
 		mongodb.vm.box_url = "http://files.vagrantup.com/precise64.box"
-		# mongodb.vm.network :hostonly, "192.168.1.11"
 		mongodb.vm.network :private_network, ip: "10.0.0.101"
 		mongodb.vm.hostname = "db.mongodb.server"
 
@@ -32,7 +31,6 @@ Vagrant::Config.run do |config|
 	config.vm.define :appserver do |appserver|
 		appserver.vm.box = "ubuntu_precise64"
 		appserver.vm.box_url = "http://files.vagrantup.com/precise64.box"
-		# appserver.vm.network :hostonly, "192.168.1.12"
 		appserver.vm.network :private_network, ip: "10.0.0.102"
         appserver.vm.hostname = "mean.development.com"
 
