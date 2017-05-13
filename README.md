@@ -1,6 +1,8 @@
 Vagrant for MEAN Stack
 ======================
 
+Source: https://github.com/cmoudy/mean-vagrant.git
+
 Vagrant Development Environment for Kick-Starting Developing an application in the MEAN Stack.
 
 ## Prerequisites
