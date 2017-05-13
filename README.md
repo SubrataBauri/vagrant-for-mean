@@ -16,8 +16,8 @@ Vagrant Development Environment for Kick-Starting Developing an application in t
 
 #### Add the following lines to your machine's host file
 
-10.0.0.101 db.mongodb.server
-10.0.0.102 mean.development.com
+    10.0.0.101 db.mongodb.server
+    10.0.0.102 mean.development.com
 
 #### Use the following hostname for your app
     * Application Server = mean.development.com
